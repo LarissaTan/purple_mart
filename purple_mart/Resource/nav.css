@@ -10,28 +10,28 @@
     text-decoration: none;
     margin: auto;
     position: relative;
-    color: rgba(255, 255, 255, 0.3);
+    color: #a466da;
 }
 
     .tag:hover,
     .active {
-        color: #fff;
+        color: #4a1b73;
     }
 
-.tag:after {
-    content: '';
-    width: 8px;
-    height: 8px;
-    background: #fff;
-    display: inline-block;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    margin-left: -4px;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: cubic-bezier(0.610, 0.000, 0.05, 1.630);
-}
+    .tag:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #4a1b73;
+        display: inline-block;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -4px;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: cubic-bezier(0.610, 0.000, 0.05, 1.630);
+    }
 
 .active:after {
     transform: scale(1);

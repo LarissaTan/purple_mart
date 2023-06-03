@@ -12,22 +12,48 @@
 
 
 <body>
-    <nav role='navigation'>
-        <a data-page="home" class="active tag" href="#">Home</a>
-        <a data-page="about" class="tag" href="#">About</a>
-        <a data-page="clients" class="tag" href="#">Clients</a>
-        <a data-page="contact" class="tag" href="#">Contact Us</a>
-    </nav> 
-
     <div class="intro">
-        <h1>hello world</h1>
-    </div>
- 
+        <nav role='navigation'>
+            <a data-page="home" class="active tag" href="#">Home</a>
+            <a data-page="about" class="tag" href="#">About</a>
+            <a data-page="clients" class="tag" href="#">Clients</a>
+            <a data-page="contact" class="tag" href="#">Contact Us</a>
+        </nav> 
 
-    <form id="form1" runat="server">
-        <div>
-        </div>
+        <h1 class="text1">PURPLE MART
+            <span class="text2">Purple Mart is an online K-pop album sales site that offers a wide selection of albums and global shipping. Users can browse the latest albums, popular recommendations, and purchase favorite albums through a simple shopping process. The website design is modern and easy to use, providing a convenient and fast shopping experience for global K-pop fans.</span>
+        </h1>
+    </div>
+    
+    <form id="form2" runat="server" style="margin: 50px;">
+      <asp:Repeater ID="re_product" runat="server">
+        <ItemTemplate>
+            <div style="margin:50px;">
+              <div class="container">
+                <div class="images">
+                  <img src="<%#Eval("product_url") %>"" />
+                </div>
+                <div class="product">
+                  <p class="singer"><%#Eval("singer_name") %></p>
+                  <h1 class="product-name"><%#Eval("product_name") %></h1>
+                  <h2 class="price"><%#Eval("product_price") %> RM</h2>
+                  <p class="desc"><%#Eval("product_des") %></p>
+                  <div class="buttons">
+                    <button class="add">Add to Cart</button>
+                    <button class="like"><span>♥</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </ItemTemplate>
+      </asp:Repeater>
     </form>
+
+    <footer class="footer">
+        <p class="copyright">SWE2009514 writen by Tan Qianqian @2023</p>
+    </footer>
+
+
 </body>
 
 

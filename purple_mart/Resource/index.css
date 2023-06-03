@@ -1,6 +1,6 @@
 ﻿body {
     margin-top: 1em;
-    background: #a25ce0;
+    background: #b583e1;
     font-family: 'Raleway', sans-serif;
     background-size: cover;
     min-height: 100vh;
@@ -31,8 +31,8 @@
 
 .title {
     text-transform: uppercase;
-    color: #8530d1;
-    font-family:STHupo;
+    color: #b583e1;
+    font-family: STHupo;
     font-weight: normal;
     font-size: 1.8em;
     text-align: center;

@@ -72,11 +72,16 @@
     <Content Include="index.aspx" />
     <Content Include="Resource\homepage.css" />
     <Content Include="Resource\img\bg_homepage.png" />
+    <Content Include="Resource\img\ive_album.jpg" />
+    <Content Include="Resource\img\jimin.jpg" />
+    <Content Include="Resource\img\springday.jpg" />
+    <Content Include="Resource\img\txt_album.jpg" />
     <Content Include="Resource\nav.css" />
     <Content Include="Resource\index.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="product.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
