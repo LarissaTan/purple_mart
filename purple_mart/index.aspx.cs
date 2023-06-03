@@ -14,11 +14,9 @@ namespace purple_mart
 
         }
 
-        protected void Btn1_Click(object sender, EventArgs e)
+        protected void submit_click(object sender, EventArgs e)
         {
-            string fname = textbox_fname.Text;
 
-            label_feedback.Text = ("Thank you " + textbox_fname.Text + "  " + textbox_lname.Text);
         }
     }
 }
