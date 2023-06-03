@@ -96,11 +96,13 @@
 
 .validation {
     display: block;
-    font-size: .8em;
+    font-size: .7em;
     padding-top: .5em;
+    font-family:'Times New Roman', Times, serif;
     position: absolute;
     right: 0;
     opacity: 0;
+    margin-right: 10px;
     transition: opacity 1s;
 }
 
@@ -111,18 +113,6 @@
 .validation.error {
         color: rgb(183, 0, 76);
 }
-
-
-.invalid:not(.required) ~ .validation.error {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.required ~ .validation.req {
-    opacity: 1;
-    transform: scale(1);
-}
-
 
 
 .submit {
@@ -136,21 +126,13 @@
     border-radius: 3px;
     padding: 10px;
     width: 100%;
-    margin: 30px 0px 20px 0px;
+    margin: 40px 0px 20px 0px;
     transition: background .3s;
 }
 
 .submit:hover {
     background: white;
     box-shadow: 5px 5px 0 0 #c6a0e8, inset 4px 4px 0 0 white;
-}
-
-.submit:active,
-.submit:focus {
-        /* position: relative;
-        top: 1px; */
-        // outline: none;
-        // background: darken(#FEDC2A, 10%);
 }
 
 

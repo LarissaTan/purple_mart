@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head runat="server">
+    <title>Purple Mart</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="Resource/index.css" rel="stylesheet" type="text/css" />
 </head>
@@ -19,16 +20,16 @@
             <div class="login_form">
                 <p class="email">
                     <asp:Label runat="server" Text="Email" CssClass="subtitle"></asp:Label>
-                    <asp:TextBox runat="server" ID="textbox_email" CssClass="input" ValidateRequestMode="Enabled"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="text_email" CssClass="input"></asp:TextBox>
 
-                    <span class="validation error"> Please enter a valid email</span>
-                    <span class="validation req"> This field is required</span>
+                    <asp:Label runat="server" ID="email_err" class="validation error"> Please enter a valid email</asp:Label>
+                    <asp:Label runat="server" ID="email_req" class="validation req"> This field is required</asp:Label>
                 </p>
                 
                 <p class="pwd">
                     <asp:Label runat="server" Text="Password" CssClass="subtitle"></asp:Label>
                     <asp:TextBox runat="server" ID="text_pwd" CssClass="input"></asp:TextBox>
-                    <span class="validation req"> This field is required</span>
+                    <asp:Label runat="server" ID="pwd_req" class="validation req"> This field is required</asp:Label>
                 </p>
  
     
