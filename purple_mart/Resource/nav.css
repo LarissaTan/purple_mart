@@ -1,0 +1,38 @@
+﻿nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.tag {
+    width: 25%;
+    text-align: center;
+    padding: 25px 20px;
+    text-decoration: none;
+    margin: auto;
+    position: relative;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+    .tag:hover,
+    .active {
+        color: #fff;
+    }
+
+.tag:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -4px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: cubic-bezier(0.610, 0.000, 0.05, 1.630);
+}
+
+.active:after {
+    transform: scale(1);
+}
