@@ -1,0 +1,13 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    align-content:center
+}
+
+.head {
+    text-anchor: middle;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-size-adjust: 120%;
+    color: blueviolet;
+}
