@@ -42,13 +42,17 @@
                         <%#Eval("P.product_price") %> RM
                     </div>
                 </div>
-
+                <br />
             </ItemTemplate>
-            <FooterTemplate></FooterTemplate>
+            
         </asp:Repeater>
+        <br />
+        <h class="total" width="100%">Total: xxx.00 RM</h>
+
+        <br /> <br /> <br /><br />
 
         <div>
-
+                <h class="title">Payment</h>
                 <table class="payment">
                     <tr>
                         <td>
@@ -107,17 +111,6 @@
         <asp:Label runat="server" ID="test">empty</asp:Label>
     </footer>
 
-    <script src="https://kit.fontawesome.com/a4ee3fc773.js" crossorigin="anonymous"></script>
-    <script>
-        function validateForm() {
-            let x = document.getElementById("Quantity").value;
-            if (isNan(x)) {
-                alert("Please input an integer as quantity.");
-                return false;
-            }
-            return true;
-        }
-    </script>
 </body>
 
 
