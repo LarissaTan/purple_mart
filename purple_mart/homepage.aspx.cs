@@ -47,6 +47,9 @@ namespace purple_mart
                 {
                     CartItem cartItem = new CartItem(p);
                     cart.Add(cartItem);
+                    
+                    string script = "alert('Add to cart successful');";
+                    ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
                 }
             }
             Session["cart"] = cart;

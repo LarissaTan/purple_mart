@@ -42,40 +42,76 @@ namespace purple_mart
         protected global::System.Web.UI.WebControls.Repeater repeat_pro;
 
         /// <summary>
-        /// RecipientName 控件。
+        /// re_name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RecipientName;
+        protected global::System.Web.UI.WebControls.TextBox re_name;
 
         /// <summary>
-        /// RecipientAddress 控件。
+        /// name_re 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RecipientAddress;
+        protected global::System.Web.UI.WebControls.Label name_re;
 
         /// <summary>
-        /// RecipientPhone 控件。
+        /// re_addr 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RecipientPhone;
+        protected global::System.Web.UI.WebControls.TextBox re_addr;
 
         /// <summary>
-        /// RecipientEmail 控件。
+        /// addr_re 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RecipientEmail;
+        protected global::System.Web.UI.WebControls.Label addr_re;
+
+        /// <summary>
+        /// re_phone 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox re_phone;
+
+        /// <summary>
+        /// phone_re 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label phone_re;
+
+        /// <summary>
+        /// re_remark 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox re_remark;
+
+        /// <summary>
+        /// remark_re 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label remark_re;
 
         /// <summary>
         /// PaymentMethod 控件。

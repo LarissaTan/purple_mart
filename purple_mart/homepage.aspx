@@ -38,10 +38,9 @@
                   <h1 class="product-name"><%#Eval("product_name") %></h1>
                   <h2 class="price"><%#Eval("product_price") %> RM</h2>
                   <p class="desc"><%#Eval("product_des") %></p>
-                  <div class="buttons">
-                    <asp:button runat="server" ID="AddToCart" CssClass="add" Text="Add to Cart" OnClick="AddToCart_Click" CommandArgument='<%#Bind("product_name")%>' CommandName='<%#Eval("product_name")%>'/>
-                    <button class="like"><span>♥</span></button>
-                      <asp:Label ID="AddCartSuccessLabel" CssClass="add-to-cart-success" runat="server" Text="Add to cart successful"></asp:Label>
+                  <div >
+                    <asp:button runat="server" ID="AddToCart" CssClass="add button" Text="Add to Cart" OnClick="AddToCart_Click" CommandArgument='<%#Bind("product_name")%>' CommandName='<%#Eval("product_name")%>'/>
+                    <button class="like button"><span>♥</span></button>
                   </div>
                 </div>
               </div>

@@ -95,7 +95,7 @@ img {
     text-align: justify;
 }
 
-button {
+.button {
     background: #b583e1;
     padding: 10px;
     display: inline-block;
@@ -109,10 +109,10 @@ button {
     cursor: pointer;
 }
 
-    button:hover {
-        background: #934ad3;
-        transition: all .4s ease-in-out;
-    }
+.button:hover {
+    background: #934ad3;
+    transition: all .4s ease-in-out;
+}
 
 
 .add {
@@ -142,4 +142,5 @@ button {
     margin: auto;
     color: #5d228f;
 }
+
 

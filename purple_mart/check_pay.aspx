@@ -17,24 +17,23 @@
             <a data-page="" class="tag"> </a>
             <a data-page=" " class="tag"> </a>
     </nav> 
-
+    
     <form id="form1" runat="server">
-
+        <h class="title">Your Order</h>
         <asp:Label ID="Alert" runat="server" CssClass="alert"></asp:Label>
         <asp:Repeater ID="repeat_pro" runat="server">
             <HeaderTemplate></HeaderTemplate>
             <ItemTemplate>
-                <!-- Display each item from data source -->
+                
                 <div class="cart-view">
-                    <h1>uuuu</h1>
                     <div class="check-box">
                         <asp:CheckBox runat="server" ID="gameCheckBox"></asp:CheckBox>
                     </div>
-                    <div class="game-name">
+                    <div class="product-name">
                         <%#Eval("P.product_name") %>
                     </div>
-                    <div class="game-image">
-                        <img src="<%#Eval("P.product_url") %>" alt="<%#Eval("P.product_name") %> image"/>
+                    <div class="product-image">
+                        <img style="max-height: 8em;" src="<%#Eval("P.product_url") %>" alt="<%#Eval("P.product_name") %> image"/>
                     </div>
                     <div class="quantity">
                         Quantity: 
@@ -44,50 +43,65 @@
                         <%#Eval("P.product_price") %> RM
                     </div>
                 </div>
+
             </ItemTemplate>
             <FooterTemplate></FooterTemplate>
         </asp:Repeater>
 
-        <div class="payment-details">
-            <div class="personal-details">
-                <table>
+        <div>
+
+                <table class="payment">
                     <tr>
-                        <td>Name: </td>
                         <td>
-                            <asp:TextBox ID="RecipientName" runat="server"></asp:TextBox>
+                            <div class="format_table">
+                                <p>
+                                    <asp:Label runat="server" Text="Name" CssClass="subtitle"></asp:Label>
+                                    <asp:TextBox runat="server" ID="re_name"  CssClass="input"></asp:TextBox>
+                                    <asp:Label runat="server" ID="name_re" class="err"> Please enter a valid value!</asp:Label>
+                                </p>
+                
+                                <p>
+                                    <asp:Label runat="server" Text="Address" CssClass="subtitle"></asp:Label>
+                                    <asp:TextBox runat="server" ID="re_addr" CssClass="input"></asp:TextBox>
+                                    <asp:Label runat="server" ID="addr_re" class="err"> Please enter a valid value!</asp:Label>
+                                </p>
+
+                                <p>
+                                    <asp:Label runat="server" Text="Phone" CssClass="subtitle"></asp:Label>
+                                    <asp:TextBox runat="server" ID="re_phone" CssClass="input"></asp:TextBox>
+                                    <asp:Label runat="server" ID="phone_re" class="err"> Please enter a valid value!</asp:Label>
+                                </p>
+
+                                <p>
+                                    <asp:Label runat="server" Text="Remark" CssClass="subtitle"></asp:Label>
+                                    <asp:TextBox runat="server" ID="re_remark" CssClass="input1"></asp:TextBox>
+                                    <asp:Label runat="server" ID="remark_re" class="err"> Please enter a valid value!</asp:Label>
+                                </p>
+         
+                            </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Address: </td>
+                            
                         <td>
-                            <asp:TextBox ID="RecipientAddress" runat="server" Rows="3"></asp:TextBox>
+                                    <div class="format_table"">
+                                            <h4>Select payment method: </h4>
+                                            <asp:RadioButtonList ID="PaymentMethod" runat="server">
+                                                <asp:ListItem Text="Board Game Wallet" Selected="True">Board Game Wallet</asp:ListItem>
+                                                <asp:ListItem Text="Online Transfer">Online Transfer</asp:ListItem>
+                                                <asp:ListItem Text="Cards">Credit/Debit Card</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                            <asp:Button ID="Pay" runat="server" Text="Pay" CssClass="submit" OnClientClick="return validateForm();" OnClick="Pay_Click" />
+                                        </div>
                         </td>
+
                     </tr>
-                    <tr>
-                        <td>Phone: </td>
-                        <td>
-                            <asp:TextBox ID="RecipientPhone" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Email: </td>
-                        <td>
-                            <asp:TextBox ID="RecipientEmail" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
+
                 </table>
-            </div>
-            <div class="payment">
-                <h4>Select payment method: </h4>
-                <asp:RadioButtonList ID="PaymentMethod" runat="server">
-                    <asp:ListItem Text="Board Game Wallet" Selected="True">Board Game Wallet</asp:ListItem>
-                    <asp:ListItem Text="Online Transfer">Online Transfer</asp:ListItem>
-                    <asp:ListItem Text="Cards">Credit/Debit Card</asp:ListItem>
-                </asp:RadioButtonList>
-                <asp:Button ID="Pay" runat="server" Text="Pay" CssClass="pay-button" OnClientClick="return validateForm();" OnClick="Pay_Click" />
-            </div>
+            
         </div>
     </form>
+
+
+
 
     <footer class="footer">
         <p>SWE2009514 writen by Tan Qianqian @2023</p>

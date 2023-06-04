@@ -89,10 +89,10 @@ namespace purple_mart
       
                     Order thisOrder = new Order()
                     {
-                        Name = RecipientName.Text == "" ? "Anonymous" : RecipientName.Text,
-                        Address = RecipientAddress.Text == "" ? "Unspecified" : RecipientAddress.Text,
-                        Phone = RecipientPhone.Text == "" ? "0123456789" : RecipientPhone.Text,
-                        Email = RecipientEmail.Text == "" ? "anonymous@gmail.com" : RecipientEmail.Text,
+                        Name = re_name.Text == "" ? "Anonymous" : re_name.Text,
+                        Address = re_addr.Text == "" ? "Unspecified" : re_addr.Text,
+                        Phone = re_phone.Text == "" ? "0123456789" : re_phone.Text,
+                        Email = re_remark.Text == "" ? "anonymous@gmail.com" : re_remark.Text,
                         Items = new List<CartItem>(),
                         TotalPrice = totalPrice
                     };
