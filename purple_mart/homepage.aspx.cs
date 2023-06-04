@@ -31,9 +31,6 @@ namespace purple_mart
             if (Session["cart"] != null)
             {
                 cart = (List<CartItem>)Session["cart"];
-                Console.WriteLine(cart.Count);
-                test.Text = cart.Count.ToString();
-                
             }
             else
             {

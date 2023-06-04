@@ -51,7 +51,6 @@
 
     <footer class="footer">
         <p>SWE2009514 writen by Tan Qianqian @2023</p>
-        <asp:Label runat="server" ID="test" Text="null"/>
     </footer>
 
 

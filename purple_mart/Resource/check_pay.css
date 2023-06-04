@@ -34,13 +34,6 @@
 }
 
 
-.alert {
-    color: rgb(231, 55, 12);
-    font-size: 1.8em;
-    text-align: center;
-    display: block;
-}
-
 .cart-view {
     display: flex;
     position: relative;
@@ -164,7 +157,7 @@
     border-radius: 3px;
     padding: 10px;
     width: 100%;
-    margin: 80px 0px 20px 0px;
+    margin: 40px 0px 20px 0px;
     transition: background .3s;
 }
 
@@ -183,6 +176,7 @@
     opacity: 0;
     margin-right: 10px;
     transition: opacity 1s;
+    color: #B54300;
 }
 
 .footer {
@@ -193,4 +187,23 @@
     width:100%;
     text-align:center;
     position: relative;
+}
+
+.title_info {
+    font-size: 1.5em;
+    font-family: 'Lato', sans-serif, sans-serif;
+    color: #a466da;
+    margin-bottom: 20px;
+}
+
+.pay_info {
+    font-size: 1em;
+    font-family: 'Lato', sans-serif, sans-serif;
+    margin-left: 35px;
+}
+
+.pay_item {
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif, sans-serif;
 }

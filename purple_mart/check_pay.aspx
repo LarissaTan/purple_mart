@@ -87,13 +87,14 @@
                             
                         <td>
                                     <div class="format_table"">
-                                            <h4>Select payment method: </h4>
-                                            <asp:RadioButtonList ID="PaymentMethod" runat="server">
-                                                <asp:ListItem Text="Board Game Wallet" Selected="True">Board Game Wallet</asp:ListItem>
-                                                <asp:ListItem Text="Online Transfer">Online Transfer</asp:ListItem>
-                                                <asp:ListItem Text="Cards">Credit/Debit Card</asp:ListItem>
+                                            <h class="title_info">Select payment method: </h>   
+                                            <br /><br />
+                                            <asp:RadioButtonList ID="PaymentMethod" runat="server" CssClass="pay_info">
+                                                <asp:ListItem Text="e-Payment" Selected="True" CssClass="pay_item">e-Payment</asp:ListItem>
+                                                <asp:ListItem Text="Cash" CssClass="pay_item">Cash</asp:ListItem>
+                                                <asp:ListItem Text="Cards" CssClass="pay_item">Credit/Debit Card</asp:ListItem>
                                             </asp:RadioButtonList>
-                                            <asp:Button ID="Pay" runat="server" Text="Pay" CssClass="submit" OnClientClick="return validateForm();" OnClick="Pay_Click" />
+                                            <asp:Button ID="Pay" runat="server" Text="Pay" CssClass="submit" OnClick="Pay_Click" />
                                         </div>
                         </td>
 

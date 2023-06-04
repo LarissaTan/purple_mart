@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.EnterpriseServices.CompensatingResourceManager;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -32,8 +33,6 @@ namespace purple_mart
                 if (cart != null)
                 {
                     txt_order.Text = "Your Order";
-                    test.Text = cart.Count.ToString();
-                    Console.WriteLine(cart.Count);
                     repeat_pro.DataSource = cart;
                     repeat_pro.DataBind();
                     foreach (CartItem item in cart)
@@ -57,8 +56,9 @@ namespace purple_mart
             String email = re_email.Text;
             String name = re_name.Text;
 
+            if (cart == null) return;
             //name
-            if (name == null)
+            if (name.Length < 3)
             {
                 name_re.Style["opacity"] = "1";
                 name_re.Style["transform"] = "scale(1)";
@@ -125,7 +125,6 @@ namespace purple_mart
             {
                 Double final_total = 0.0;
 
-                // deduct from stock for each item
                 foreach (RepeaterItem item in repeat_pro.Items)
                 {
                     CheckBox checkBox = item.FindControl("CheckBox") as CheckBox;
@@ -134,8 +133,15 @@ namespace purple_mart
                         final_total += cart[item.ItemIndex].P.product_price;
                     }
                 }
-
+                
                 string script = "alert('Dear " + name + ", you order has paid. The final price is "+ final_total.ToString() + "RM (this based on what you select on the payment page)." + "');";
+                ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
+                Session["cart"] = null;
+                cart = (List<CartItem>)Session["cart"];
+            }
+            else
+            {
+                string script = "alert('Invalid information! Failed to pay! Please refer back to information part!');";
                 ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
             }
 
