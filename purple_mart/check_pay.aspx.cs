@@ -85,28 +85,10 @@ namespace purple_mart
                     }
                 }
                 
-
-      
-                    Order thisOrder = new Order()
-                    {
-                        Name = re_name.Text == "" ? "Anonymous" : re_name.Text,
-                        Address = re_addr.Text == "" ? "Unspecified" : re_addr.Text,
-                        Phone = re_phone.Text == "" ? "0123456789" : re_phone.Text,
-                        Email = re_remark.Text == "" ? "anonymous@gmail.com" : re_remark.Text,
-                        Items = new List<CartItem>(),
-                        TotalPrice = totalPrice
-                    };
-
-
-                    orderList.Add(thisOrder);
-                    Session["orderList"] = orderList;
-                    Session["productlist"] = productList;
-                    Response.Redirect("home.aspx");
-                
-                
-
-                Alert.Visible = false;
-
+                    
+                string script = "alert('Payment has been done successfully! Please wait for delivery!');";
+                ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
+                Response.Redirect("homepage.aspx");
             }
             else
             {

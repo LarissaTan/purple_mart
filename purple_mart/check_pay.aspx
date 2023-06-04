@@ -36,8 +36,7 @@
                         <img style="max-height: 8em;" src="<%#Eval("P.product_url") %>" alt="<%#Eval("P.product_name") %> image"/>
                     </div>
                     <div class="quantity">
-                        Quantity: 
-                        <asp:TextBox ID="Quantity" runat="server" Text="1"></asp:TextBox>
+                        Quantity: 1
                     </div>
                     <div class="price">
                         <%#Eval("P.product_price") %> RM
@@ -73,9 +72,9 @@
                                 </p>
 
                                 <p>
-                                    <asp:Label runat="server" Text="Remark" CssClass="subtitle"></asp:Label>
-                                    <asp:TextBox runat="server" ID="re_remark" CssClass="input1"></asp:TextBox>
-                                    <asp:Label runat="server" ID="remark_re" class="err"> Please enter a valid value!</asp:Label>
+                                    <asp:Label runat="server" Text="Email" CssClass="subtitle"></asp:Label>
+                                    <asp:TextBox runat="server" ID="re_email" CssClass="input"></asp:TextBox>
+                                    <asp:Label runat="server" ID="email_re" class="err"> Please enter a valid value!</asp:Label>
                                 </p>
          
                             </div>

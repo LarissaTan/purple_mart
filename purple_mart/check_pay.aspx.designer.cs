@@ -96,22 +96,22 @@ namespace purple_mart
         protected global::System.Web.UI.WebControls.Label phone_re;
 
         /// <summary>
-        /// re_remark 控件。
+        /// re_email 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox re_remark;
+        protected global::System.Web.UI.WebControls.TextBox re_email;
 
         /// <summary>
-        /// remark_re 控件。
+        /// email_re 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label remark_re;
+        protected global::System.Web.UI.WebControls.Label email_re;
 
         /// <summary>
         /// PaymentMethod 控件。
