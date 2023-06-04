@@ -34,68 +34,33 @@ namespace purple_mart
             {
                 List<CartItem> cart = (List<CartItem>)Session["cart"];
 
-                
+                Double totalPrice = 0.0;
                 if (cart != null)
                 {
+                    txt_order.Text = "Your Order";
                     test.Text = cart.Count.ToString();
                     Console.WriteLine(cart.Count);
                     repeat_pro.DataSource = cart;
                     repeat_pro.DataBind();
+                    foreach (CartItem item in cart)
+                    {
+                        totalPrice += item.P.product_price;
+                        
+                    }
+                    total_pri.Text = "Total: " + totalPrice.ToString() + "RM";//Total: xxx.00 RM
+                }
+                else
+                {
+                    txt_order.Text = "Nothing in cart yet.....";
                 }
             }
 
-
-            Alert.Visible = false;
         }
 
         protected void Pay_Click(object sender, EventArgs e)
         {
 
-            shoppingCart = (List<CartItem>)Session["shoppingcart"];
-            if (PaymentMethod.SelectedItem.Text == "Board Game Wallet")
-            {
-                Double totalPrice = 0.0;
-                foreach (RepeaterItem item in repeat_pro.Items)
-                {
-                    CheckBox chk = item.FindControl("gameCheckBox") as CheckBox;
-                    if (chk.Checked)
-                    {
-                        TextBox quantity = item.FindControl("Quantity") as TextBox;
-                        int qty;
-                        try
-                        {
-                            qty = Int16.Parse(quantity.Text);
-                        }
-                        catch
-                        {
-                            Alert.Text = "Please enter an integer for quantity";
-                            Alert.Visible = true;
-                            return;
-                        }
-                        if (qty <= 0)
-                        {
-                            Alert.Text = "Please enter a positive integer for quantity";
-                            Alert.Visible = true;
-                            return;
-                        }
-                        
-                        totalPrice += shoppingCart[item.ItemIndex].P.product_price * qty;
 
-
-                    }
-                }
-                
-                    
-                string script = "alert('Payment has been done successfully! Please wait for delivery!');";
-                ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
-                Response.Redirect("homepage.aspx");
-            }
-            else
-            {
-                // warning
-                Alert.Text = "Function currently unavailable...";
-                Alert.Visible = true;
-            }
 
         }
     }

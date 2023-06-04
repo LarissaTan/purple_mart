@@ -19,15 +19,15 @@
     </nav> 
     
     <form id="form1" runat="server">
-        <h class="title">Your Order</h>
-        <asp:Label ID="Alert" runat="server" CssClass="alert"></asp:Label>
+        <asp:Label runat="server" ID="txt_order" class="title"></asp:Label>
+        <br />
         <asp:Repeater ID="repeat_pro" runat="server">
             <HeaderTemplate></HeaderTemplate>
             <ItemTemplate>
                 
                 <div class="cart-view">
                     <div class="check-box">
-                        <asp:CheckBox runat="server" ID="gameCheckBox"></asp:CheckBox>
+                        <asp:CheckBox runat="server" ID="CheckBox"></asp:CheckBox>
                     </div>
                     <div class="product-name">
                         <%#Eval("P.product_name") %>
@@ -47,7 +47,8 @@
             
         </asp:Repeater>
         <br />
-        <h class="total" width="100%">Total: xxx.00 RM</h>
+
+        <asp:Label runat="server" ID="total_pri" class="total"></asp:Label>
 
         <br /> <br /> <br /><br />
 

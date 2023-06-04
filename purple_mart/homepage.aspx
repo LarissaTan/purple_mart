@@ -15,7 +15,7 @@
     <div class="intro">
         <nav role='navigation'>
             <a data-page="home" class="active tag">Home</a>
-            <a data-page="cart" class="tag" href="check_pay.aspx">Cart</a>
+            <a data-page="cart" href="check_pay.aspx" class="tag" >Cart</a>
             <a data-page="" class="tag"> </a>
             <a data-page=" " class="tag"> </a>
         </nav> 
