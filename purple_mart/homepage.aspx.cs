@@ -1,4 +1,5 @@
-﻿using System;
+﻿using purple_mart;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,8 @@ namespace purple_mart
     public partial class homepage : System.Web.UI.Page
     {
         protected List<product> productList;
+        protected List<CartItem> cart;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             productList = new List<product>();
@@ -21,6 +24,32 @@ namespace purple_mart
 
             re_product.DataSource = productList;
             re_product.DataBind();
+        }
+
+        protected void AddToCart_Click(object sender, EventArgs e)
+        {
+            if (Session["cart"] != null)
+            {
+                cart = (List<CartItem>)Session["cart"];
+                Console.WriteLine(cart.Count);
+                test.Text = cart.Count.ToString();
+                
+            }
+            else
+            {
+                cart = new List<CartItem>();
+            }
+
+            Button button = (Button)sender;
+            foreach (product p in productList)
+            {
+                if (p.product_name == button.CommandArgument.ToString() && p!= null)
+                {
+                    CartItem cartItem = new CartItem(p);
+                    cart.Add(cartItem);
+                }
+            }
+            Session["cart"] = cart;
         }
 
     }

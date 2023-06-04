@@ -83,6 +83,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartItem.cs" />
     <Compile Include="check_pay.aspx.cs">
       <DependentUpon>check_pay.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -90,6 +91,7 @@
     <Compile Include="check_pay.aspx.designer.cs">
       <DependentUpon>check_pay.aspx</DependentUpon>
     </Compile>
+    <Compile Include="order.cs" />
     <Compile Include="product.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

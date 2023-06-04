@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="purple_mart.homepage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="purple_mart.homepage" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -14,10 +14,10 @@
 <body>
     <div class="intro">
         <nav role='navigation'>
-            <a data-page="home" class="active tag" href="#">Home</a>
-            <a data-page="about" class="tag" href="#">About</a>
-            <a data-page="clients" class="tag" href="#">Clients</a>
-            <a data-page="contact" class="tag" href="#">Contact Us</a>
+            <a data-page="home" class="active tag">Home</a>
+            <a data-page="cart" class="tag" href="check_pay.aspx">Cart</a>
+            <a data-page="" class="tag"> </a>
+            <a data-page=" " class="tag"> </a>
         </nav> 
 
         <h1 class="text1">PURPLE MART
@@ -39,8 +39,9 @@
                   <h2 class="price"><%#Eval("product_price") %> RM</h2>
                   <p class="desc"><%#Eval("product_des") %></p>
                   <div class="buttons">
-                    <button class="add">Add to Cart</button>
+                    <asp:button runat="server" ID="AddToCart" CssClass="add" Text="Add to Cart" OnClick="AddToCart_Click" CommandArgument='<%#Bind("product_name")%>' CommandName='<%#Eval("product_name")%>'/>
                     <button class="like"><span>♥</span></button>
+                      <asp:Label ID="AddCartSuccessLabel" CssClass="add-to-cart-success" runat="server" Text="Add to cart successful"></asp:Label>
                   </div>
                 </div>
               </div>
@@ -50,7 +51,8 @@
     </form>
 
     <footer class="footer">
-        <p class="copyright">SWE2009514 writen by Tan Qianqian @2023</p>
+        <p>SWE2009514 writen by Tan Qianqian @2023</p>
+        <asp:Label runat="server" ID="test" Text="null"/>
     </footer>
 
 
@@ -58,3 +60,7 @@
 
 
 </html>
+
+
+
+
