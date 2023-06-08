@@ -14,7 +14,7 @@
 <body>
     <div class="box">
         <h1 class="title">Purple Mart</h1>
-        <h3 class="heading">Login</h3>
+        <h3 class="heading">Comfrim your order!</h3>
 
         <form id="com" runat="server">
             <div class="login_form">
