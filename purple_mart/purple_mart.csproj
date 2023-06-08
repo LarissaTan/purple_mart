@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="check_pay.aspx" />
+    <Content Include="comfirm_order.aspx" />
     <Content Include="Global.asax" />
     <Content Include="homepage.aspx" />
     <Content Include="index.aspx" />
@@ -91,6 +92,13 @@
     <Compile Include="check_pay.aspx.designer.cs">
       <DependentUpon>check_pay.aspx</DependentUpon>
     </Compile>
+    <Compile Include="comfirm_order.aspx.cs">
+      <DependentUpon>comfirm_order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="comfirm_order.aspx.designer.cs">
+      <DependentUpon>comfirm_order.aspx</DependentUpon>
+    </Compile>
     <Compile Include="order.cs" />
     <Compile Include="product.cs" />
     <Compile Include="Global.asax.cs">
@@ -113,6 +121,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
