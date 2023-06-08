@@ -40,9 +40,9 @@
                 </p>
  
     
-                <p><asp:Button runat="server" Text="Comfirm" ID="com_y" CssClass="submit"></asp:Button></p>
+                <p><asp:Button runat="server" OnClick="comfirm" Text="Comfirm" ID="com_y" CssClass="submit"></asp:Button></p>
 
-                <p><asp:Button runat="server" Text="Cancel" ID="com_n" CssClass="submit"></asp:Button></p>
+                <p><asp:Button runat="server" OnClick="cancel" Text="Cancel" ID="com_n" CssClass="submit"></asp:Button></p>
          
             </div>
         </form>

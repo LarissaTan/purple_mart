@@ -12,31 +12,21 @@ namespace purple_mart
 
         public class Order
         {
-            public String Name { get; set; }
-            public String Address { get; set; }
-            public String Email { get; set; }
-            public String Phone { get; set; }
-            public List<CartItem> Items { get; set; }
-            public Double TotalPrice { get; set; }
-            public String OutputItemsDetails
+            public String name { get; set; }
+            public String addr { get; set; }
+            public String email { get; set; }
+            public String phone { get; set; }
+            public Double total { get; set; }
+
+            public Order(String tmp_name, String tmp_addr, String tmp_email, String tmp_phone, Double tmp_total)
             {
-                get { return getItems(); }
+                this.name = tmp_name;
+                this.addr = tmp_addr;
+                this.email = tmp_email;
+                this.phone = tmp_phone;
+                this.total = tmp_total;
             }
-            private String getItems()
-            {
-                String output = "";
-                for (int i = 0; i < Items.Count; i++)
-                {
-                    output += "Item " + (i + 1).ToString() +
-                        ": <div class='recipient-items-game'>" +
-                            Items[i].P.product_name +
-                        "</div> * " +
-                        "<div class='recipient-items-quantity'>" +
-                            Items[i].quanlity +
-                        "</div><br /> ";
-                }
-                return output;
-            }
+
         }
 
 }

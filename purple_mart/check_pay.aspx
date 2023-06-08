@@ -94,7 +94,7 @@
                                                 <asp:ListItem Text="Cash" CssClass="pay_item">Cash</asp:ListItem>
                                                 <asp:ListItem Text="Cards" CssClass="pay_item">Credit/Debit Card</asp:ListItem>
                                             </asp:RadioButtonList>
-                                            <asp:Button ID="Pay" runat="server" Text="Pay" CssClass="submit" OnClick="Pay_Click" />
+                                            <asp:Button ID="Pay" runat="server" Text="Pay" CssClass="submit" OnClick="Pay_Click" Visible="false"/>
                                         </div>
                         </td>
 

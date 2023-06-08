@@ -16,6 +16,7 @@ namespace purple_mart
     {
         protected List<CartItem> cart = null;
         protected List<product> productList = null;
+        Double totalPrice = 0.0;
         protected void Page_Load(object sender, EventArgs e)
         {
             cart = (List<CartItem>)Session["cart"];
@@ -29,9 +30,9 @@ namespace purple_mart
 
             if (!IsPostBack)
             {
-                Double totalPrice = 0.0;
                 if (cart != null)
                 {
+                    Pay.Visible = true;
                     txt_order.Text = "Your Order";
                     repeat_pro.DataSource = cart;
                     repeat_pro.DataBind();
@@ -44,6 +45,7 @@ namespace purple_mart
                 }
                 else
                 {
+                    Pay.Visible = false;
                     txt_order.Text = "Nothing in cart yet.....";
                 }
             }
@@ -55,6 +57,9 @@ namespace purple_mart
             bool check = true;
             String email = re_email.Text;
             String name = re_name.Text;
+            String phone = re_phone.Text;
+            String addr = re_addr.Text;
+
 
             if (cart == null) return;
             //name
@@ -133,11 +138,15 @@ namespace purple_mart
                         final_total += cart[item.ItemIndex].P.product_price;
                     }
                 }
-                
-                string script = "alert('Dear " + name + ", you order has paid. The final price is "+ final_total.ToString() + "RM (this based on what you select on the payment page)." + "');";
-                ClientScript.RegisterStartupScript(this.GetType(), "Popup", script, true);
+
+                Order tmp = new Order(name, addr, email, phone, final_total);
+
+                Session["order"] = tmp;
+
                 Session["cart"] = null;
                 cart = (List<CartItem>)Session["cart"];
+
+                Server.Transfer("comfirm_order.aspx");
             }
             else
             {
